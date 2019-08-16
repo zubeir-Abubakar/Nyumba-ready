@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{{ block.super }}
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div class="container">
+
+    <div class="row">
+            {% for community_item in community %}
+        <div class="col-md-12">
+
+            <h2>{{ community_item.title }}</h2>
+            
+            {% if community_item.community_image %}
+            <div class="w3-card-4" style="width:50%">
+
+                <img src="{{community_item.community_image.url}}" alt="Alps" style="width:100%">
+                {% endif %}
+                <div class="container">
+                        <h5 class="card-title">{{ community_item.title }} </h5>
+                        <p class="card-text">
+                        <h4>{{ community_item.estate }}</h4>
+                        </p>
+                        <a href="{% url 'businesses' %}" class="btn btn-primary">
+                                View More Info
+                                </a>
+                                <a href="{% url 'residents' %}" class="btn btn-primary">
+                                See Residents
+                                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+{% empty %}
+</div>
+{% endfor %}
+
+{% endblock %}

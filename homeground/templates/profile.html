@@ -1,0 +1,42 @@
+<style>
+    body {
+        background: black
+    }
+</style>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid" style="  background-color:  rgba(175, 39, 39, 0.5);
+color: blanchedalmond">
+    <div class="row new-add">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="text-center">
+                <h2>Welcome to the Neighbourhood! Keeping each other close.</h2>
+                <p>Please add a profile to aboard desired hood.</p>
+                <a href="{% url 'new_profile'%}"><button class="btn btn-primary">Edit Profile</button></a>
+            </div>
+
+            {%for profile in profiles%}
+            <div class="profile-details">
+
+                <img src="{{profile.prof_pic.url}}" alt="Profile image" class="img-fluid rounded-circle"
+                    style="width:300px;height: 300px;">
+                <h2>{{profile.name}}</h2>
+                <p>Contact: <em>{{profile.email}}</em></p>
+
+            </div>
+            {% endfor %}
+            {%if profile%}
+            {% else %}
+
+            <span class="text-highlight">
+                <h1 class="animated pulse infinite">Be part of a Community Change. Dont wait</h1>
+            </span>
+
+            {% endif %}
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+{% endblock %}

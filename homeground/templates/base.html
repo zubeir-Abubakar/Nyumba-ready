@@ -1,0 +1,63 @@
+{% load bootstrap3 %}
+{% load static %}
+{% load pwa %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homex</title>
+  {% block styles %}
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/bases.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  {% endblock %}
+
+  {% progressive_web_app_meta %}
+</head>
+
+<body>
+  {% include "navbar.html" %}<br><br><br><br><br>
+  {% block content %}<h1></h1>
+  {% endblock %}
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {% bootstrap_javascript %}
+  {% endblock %}
+  <br>
+  <footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row">
+
+        <!-- Grid column -->
+        </a>
+      </div>
+    </div>
+    <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> Zubeyr Abubakar</a>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-gmail"></a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+</body>
+
+</html>

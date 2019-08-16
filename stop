@@ -1,0 +1,18 @@
+ id |        title        |              business_image              | community_id | selling |                           details                           |               location                
+----+---------------------+------------------------------------------+--------------+---------+-------------------------------------------------------------+---------------------------------------
+  3 | Bogani Apartments   | businesses/apr4_xrGx8Qf.jpeg             |            1 | shoes   |                                                             | 
+  4 | Wanyoike Apartments | businesses/apartment_lxjOCrQ.jpg         |            6 | shoes   |                                                             | 
+  6 | was the first       | businesses/apartment_rMrjILF.jpg         |            2 | shoes   |                                                             | 
+  5 | was the first       | businesses/apartment_zVU0Ekw.jpg         |            6 | shoes   | it is very spacious with 3 bedroom master ensuite           | 
+  7 | Loret Apartments    | businesses/apartment_UDolC2H.jpg         |            1 | shoes   |                                                             | 
+  8 | testing             | businesses/apartment_lHWPUT5.jpg         |            1 | shoes   |                                                             | 
+  9 | first one           | businesses/apartment_zENIPT3.jpg         |            3 | shoes   |                                                             | 
+  2 | Belmonte            | businesses/apr3_xGkmxWM.jpeg             |            2 | laptops | It is an amazing master ensuite with swimming pool and gym. | 
+  1 | My apartments       | businesses/apr4_O6W79VD.jpeg             |            1 | shoes   | serene environment with ample parking.\r                   +| 
+    |                     |                                          |              |         | 2 & bedroom ensuite available.                              | 
+ 10 | My house            | businesses/apartment_ZN493hG.jpg         |            2 | shoes   | very new                                                    | 
+ 11 | Amber Homes         | businesses/apartment_zENIPT3_pFkJ703.jpg |            3 | abc     | abc                                                         | 
+ 12 | another one         | businesses/apartment_c1TdDBj.jpg         |            2 | shoes   | nice one                                                    | 
+ 13 | texas               | businesses/apr2_W2UWRri_CR7t53t.jpeg     |            1 | shoes   | new                                                         | https://goo.gl/maps/LbK5fNLU7i5sR8cz5
+(13 rows)
+

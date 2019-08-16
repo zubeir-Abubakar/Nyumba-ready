@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block content %}
+{{ block.super }}
+{% load static %}
+{% load bootstrap3 %}
+
+<div class="row">
+    <div class="jumbotron">
+    <h1 class="text-center">welcome to Homex</h1>
+</div>
+</div>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div class="container">
+
+    <div class="row">
+            {% for business_item in business %}
+            
+        <div class="col-md-5">
+
+            <h2>{{ community_item.title }}</h2>
+            
+            {% if business_item.business_image %}
+            <div class="w3-card-4" style="width:80%">
+
+                <img src="{{business_item.business_image.url}}" alt="Alps" style="width:100%">
+                
+                <div class="container">
+                        <h5 class="card-title">{{ community_item.title }} </h5>
+                        <p class="card-text">
+                        <h4>{{ business_item.title }}</h4>
+                        </p>
+                        
+
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View details</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Details</h4>
+      </div>
+      <div class="modal-body">
+        <p><h4>{{ business_item.details}}</h4></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View Reviews</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Comments</h4>
+      </div>
+      <div class="modal-body">
+        <p><h4>{{ comment_item.comments }}</h4></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    {% endif%}
+  </div>
+</div>
+<div class="container">
+<a href="https://goo.gl/maps/fMmvSvh9wocYBwzQ7"class="btn btn-danger">
+  Show in Map
+</a>
+</div>
+<h4>Posted by: {{ business_item.poster }}</h4>
+
+                <div class="w3-container w3-center">
+
+                    <h5>{{ community_item.title }}</h5>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% empty %}
+</div>
+{% endfor %}
+
+{% endblock %}

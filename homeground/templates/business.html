@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <img src="{{business_item.business_image.url}}" class="img-responsive" alt="">
+    </div>
+
+    <div class="row">
+        <h1 class="text-center">{{business_item.title}}</h1>
+    </div>
+
+    <div class="row">
+        {% autoescape on %}
+        {{business.post| safe}}
+        {% endautoescape %}
+
+    </div>
+
+    <div class="row">
+        <p>Posted by {{business_item.resident.first_name}}</p>
+    </div>
+
+</div>
+
+{% endblock %}
