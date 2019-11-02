@@ -1,4 +1,4 @@
-# Homex
+# NYUMBA-READY
 This is an application that allows you to be in the loop about everything happening in your neighborhood. From contact information of different handyman to meeting announcements or even alerts.
 
 ## User stories
@@ -52,7 +52,7 @@ Since one needs a virtual enviroment, Create a virtual file and add the followin
 
 ### Contact Information
 
-To reach me, email me at: > muragemaina09@gmail.com
+To reach me, email me at: > zubkayare@gmail.com
 
 ## License
 This project is licensed under the MIT Open Source license, (c)
